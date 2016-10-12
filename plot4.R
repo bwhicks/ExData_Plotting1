@@ -1,4 +1,6 @@
-# Assumes you setwd() to local location of git repo
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", "household_power_consumption.zip", method="curl")
+unzip('household_power_consumption.zip')
+
 data = read.delim("household_power_consumption.txt", sep=";", nrows=69516, header=TRUE, na.strings=c('?')) #Clip nrows for load sake
 
 #Combine date and date time
