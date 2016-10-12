@@ -1,3 +1,4 @@
+# Assumes you setwd() to local location of git repo
 data = read.delim("household_power_consumption.txt", sep=";", nrows=69516, header=TRUE, na.strings=c('?')) #Clip nrows for load sake
 make_dates <- function(x) strptime(x,'%d/%m/%Y')
 data <- cbind(sapply(data[1], make_dates), data[2:9])

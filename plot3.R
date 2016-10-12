@@ -1,3 +1,4 @@
+# Assumes you setwd() to local location of git repo
 data = read.delim("household_power_consumption.txt", sep=";", nrows=69516, header=TRUE, na.strings=c('?')) #Clip nrows for load sake
 
 #Combine date time for time sensitive graph
