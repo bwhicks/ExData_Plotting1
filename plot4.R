@@ -1,6 +1,7 @@
 # Assumes you setwd() to local location of git repo
 data = read.delim("household_power_consumption.txt", sep=";", nrows=69516, header=TRUE, na.strings=c('?')) #Clip nrows for load sake
 
+#Combine date and date time
 data <- cbind(Date = with(data, paste(Date, Time)), data[3:9])
 
 #Make them POSIX date-time objects

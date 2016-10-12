@@ -7,7 +7,7 @@ data <- cbind(sapply(data[1], make_dates), data[2:9])
 subset_data = subset(data, Date >= strptime('2007-02-01', format='%Y-%m-%d'))
 
 
-#Open device, write histogram, default settings for compatibility
+#Open device, write histogram
 png(filename='plot1.png', width=480, height=480)
 with(subset_data, hist(Global_active_power, main="Global Active Power", col="red", axes='true', border='black', xlab='Global Active Power (kilowatts)',
                        ylab='Frequency'))
