@@ -14,4 +14,3 @@ hist(global_active_power, main="Global Active Power", col="red", axes='true', bo
      ylab='Frequency')
 dev.off()
 
-
